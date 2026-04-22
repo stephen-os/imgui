@@ -22,7 +22,6 @@ project "ImGui"
         "imstb_textedit.h",
         "imstb_truetype.h",
 
-        -- GLFW backend (platform/input handling)
         "backends/imgui_impl_glfw.cpp",
         "backends/imgui_impl_glfw.h"
     }
@@ -31,6 +30,11 @@ project "ImGui"
     {
         ".",
         "../glfw/include"
+    }
+
+    defines
+    {
+        "IMGUI_ENABLE_DOCKING"
     }
 
     filter "system:windows"
